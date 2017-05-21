@@ -1,0 +1,43 @@
+﻿form {
+    border: 3px solid #f1f1f1;
+    margin: 0 40%;
+    
+}
+
+input[type=text], input[type=password] {
+    background-color:white;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+     margin:inherit;
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+       margin:inherit;
+    width: 20%;
+    border-radius: 50%;
+}
+
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+    color:black;
+}
+

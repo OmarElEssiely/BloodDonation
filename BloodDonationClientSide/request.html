@@ -1,0 +1,139 @@
+﻿<head>
+    <title>Blood Donation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/coin-slider.css" />
+    <script type="text/javascript" src="js/cufon-yui.js"></script>
+    <script type="text/javascript" src="js/cufon-georgia.js"></script>
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/coin-slider.min.js"></script>
+    <script src="js/HALIM_jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script>
+        $(document).ready(function () {
+            $(function () {
+                //date piker to force user to enter the right date
+                $(".datepicker").datepicker();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="logo">
+                <h1><img src="images/9.png" class="logo" />
+            </div>
+            <div class="header_resize">
+                <div class="menu_nav">
+
+                    <ul>
+                        <li><a href="index.html"><span>Home Page</span></a></li>
+                        <li><a href="Preparing.html"><span>Preparing For Donation</span></a></li>
+                        <li class="active"><a href="request.html"><span>Request</span></a></li>
+                        <li><a href="Donate.html"><span>Donation</span></a></li>
+                        <li><a href="MyAccount.html"><span>My Account</span></a></li>
+                        <li><a href="Admin.html"><span>Admin</span></a></li>
+                        <li><a href="about.html"><span>About Us</span></a></li>
+                        <li><a href="contact.html"><span>Contact Us</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="clr"></div>
+                <div class="slider">
+                    <div id="coin-slider">
+                        <a href="#"><img src="images/slide1.jpg" width="1200" height="100" alt="" />
+                            <span>Giving blood saves lives. The blood you give is a lifeline in an emergency and for people who need long-term treatments.
+                 Many people would not be alive today if donors had not generously given their blood.</span></a>
+                        <a href="#"><img src="images/slide2.jpg" width="960" height="360" alt="" />
+                            <span> Around half our current donors are over 45. That's why we need more young people (over the age of 17) to start giving blood, so we can make sure we have enough blood in the future.</span></a>
+                        <a href="#"><img src="images/slide3.jpg" width="960" height="360" alt="" />
+                            <span>We need over 6,000 blood donations every day to treat patients</span></a>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+                <div class="clr"></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content_resize">
+                <div class="mainbar">
+                    <div class="article">
+                        <h2><span>Request For</span> Life</h2>
+                        <div class="clr"></div>
+                        <form action="#" method="post" id="leavereply">
+                            <ol>
+                                <li>
+                                    <label for="type">Type(required)</label>
+                                    <select>
+<option value=''>[Select a Type]</option>
+<option selected value='1'>A+</option>
+<option value='2'>A-</option>
+<option value='3'>B+</option>
+<option value='4'>B-</option>
+<option value='5'>AB</option>
+<option value='6'>O</option>
+<option value='7'>H</option>
+<option value='8'>M</option>
+</select>
+                                </li>
+
+                                <li>
+                                    <label for="quentity">Quentity (required)</label>
+                                    <input type="number" id="" name="" class="text" placeholder="Enter Quentity U Need " required/>
+                                </li>
+                                <li>
+                                    <label for="hospital">Hospital Name (required)</label>
+                                    <input id="" name="" class="text" placeholder="Enter Hospital Name " required/>
+                                </li>
+                                <li>
+                                    <label for="">Hospital Address (required)</label>
+                                    <input id="" name="" class="text" placeholder="Enter Hospital Address " required/>
+                                </li>
+                                <li>
+                                    <label for="">Periority</label>
+                                    <input type="radio" name="rdl_per" value="high" required>High Periority<br>
+                                    <input type="radio" name="rdl_per" value="normal">Normal Periority<br>
+                                </li>
+                                <li>
+                                    <label for=""><b>Date:</b> If You in Normal case (required)</label>
+                                    <input type="date" class="datepicker" placeholder="Select Date " required>
+                                </li>
+                                <li>
+                                    <label for=""><b>Time:</b> If You in Normal case (required)</label>
+                                    <input type="time"  placeholder="Enter Time" required>
+                                </li>
+                                <li>
+                                    <input type="image" name="imageField" id="imageField" onclick="alert('Your Request is Sended ')" src="images/submit.gif" class="send" />
+                                    <div class="clr"></div>
+                                </li>
+                            </ol>
+                        </form>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <div class="clr"></div>
+
+                </div>
+                <div class="clr"></div>
+            </div>
+        </div>
+        <div class="fbg">
+            <div class="fbg_resize">
+                <p>..We Will Help You As We can </p>
+                <div class="clr"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer_resize">
+
+                <div style="clear:both;"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

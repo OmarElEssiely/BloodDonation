@@ -1,0 +1,34 @@
+{
+    "persons": [
+        {
+            "name": "Ahmed Osman",
+            "email": "Ahmed.Osman@gmail.com",
+            "phone": "021234567",
+            "mobile": "01234567890"
+        },
+        {
+            "name": "Omar Hassan",
+            "email": "Omar.Hassan@gmail.com",
+            "phone": "021234567",
+            "mobile": "01234567890"
+        },
+        {
+            "name": "Marwa Yehia",
+            "email": "Marwa.Yehia@gmail.com",
+            "phone": "021234567",
+            "mobile": "01234567890"
+        },
+        {
+            "name": "Khalid Abd Elmonem",
+            "email": "Khalid.Monem@gmail.com",
+            "phone": "021234567",
+            "mobile": "01234567890"
+        },
+        {
+            "name": "Ahmed Halim",
+            "email": "Ahmed.Halim@gmail.com",
+            "phone": "021234567",
+            "mobile": "01234567890"
+        }
+    ]
+}

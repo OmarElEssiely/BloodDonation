@@ -1,0 +1,19 @@
+{
+    "hospital": [
+        {
+            "name": "Dar El Fouad",
+            "address": "6 October",
+            "phone": "0100-1150-359"
+        },
+        {
+            "name": "As-Salam International Hospital ",
+            "address": "Maadi",
+            "phone": "19883"
+        },
+        {
+            "name": "Egyptian IVF Center",
+            "address": "Maadi",
+            "phone": "02 25254928"
+        }
+    ]
+}

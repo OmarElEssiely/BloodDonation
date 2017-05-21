@@ -1,0 +1,278 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>VictoryPro | Contact</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/coin-slider.css" />
+    <script type="text/javascript" src="js/cufon-yui.js"></script>
+    <script type="text/javascript" src="js/cufon-georgia.js"></script>
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/coin-slider.min.js"></script>
+    <script src="jQuery-P.js"></script>
+    <script src="js/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#takeinfo").hide();
+            $.ajax("js/personinfo.json", {
+                type: "Get",
+                dataType: "json",
+                contentType: "application/json",
+                success: function(dataObj) {
+                    $("#name").html(dataObj.persons[0].name);
+                    $("#age").html(dataObj.persons[0].age);
+                    $("#gender").html(dataObj.persons[0].gender);
+                    $("#phone").html(dataObj.persons[0].phone);
+                    $("#mobile").html(dataObj.persons[0].mobile);
+                    $("#email").html(dataObj.persons[0].email);
+                    $("#btype").html(dataObj.persons[0].btype);
+                    $("#state").html(dataObj.persons[0].state);
+                },
+            })
+            var getinfo1 = function() {
+                name1 = $("#fnamein").val() + ' ' + $("#lnamein").val();
+                age1 = $("#agein").val();
+                gender1 = $("#genderin").val();
+                phone1 = $("#phonein").val();
+                mobile1 = $("#mobilein").val();
+                email1 = $("#emailin").val();
+                btype1 = $("#btypein").val();
+                state1 = $("#countryin").val();
+            }
+            var showupdate = function() {
+                $("#showinfo").hide();
+                $("#takeinfo").show();
+            }
+
+            $("#update").click(showupdate);
+
+            var showinfo = function() {
+                $("#showinfo").show();
+                $("#takeinfo").hide();
+            }
+            var name, name2;
+            var age, age2;
+            var gender, gender2;
+            var phone, phone2;
+            var mobile, mobile2;
+            var email, email2;
+            var btype, btype2;
+            var state, state2;
+
+            var getinfo = function() {
+                name = $("#fnamein").val() + ' ' + $("#lnamein").val();
+                age = $("#agein").val();
+                gender = $("#genderin").val();
+                phone = $("#phonein").val();
+                mobile = $("#mobilein").val();
+                email = $("#emailin").val();
+                btype = $("#bTypein").val();
+                state = $("#countryin").val();
+            }
+            var submit = function() {
+                getinfo();
+                if (name != '' & name != ' ') {
+                    if (age != '') {
+                        if (gender == 'Male' || gender == 'Female') {
+                            if (phone != '') {
+                                if (mobile != '') {
+                                    if (email != '') {
+                                        if (btype == 'O+' || btype == 'O-' || btype == 'A+' || btype == 'B+' || btype == 'AB+' || btype == 'AB-') {
+                                            if (state == 'Cairo' || state == 'Alex' || state == 'Ismaillia' || state == 'Mansoura') {
+                                                $("#name").html(name);
+                                                $("#age").html(age);
+                                                $("#gender").html(gender);
+                                                $("#phone").html(phone);
+                                                $("#mobile").html(mobile);
+                                                $("#email").html(email);
+                                                $("#btype").html(btype);
+                                                $("#state").html(state);
+                                                showinfo();
+                                            } else {
+                                                alert("Please Enter Your Country")
+                                            }
+                                        } else {
+                                            alert("Please Enter Your Blood Type")
+                                        }
+                                    } else {
+                                        alert("Please Enter Your Mail")
+                                    }
+                                } else {
+                                    alert("Please Enter Your Mobile")
+                                }
+                            } else {
+                                alert("Please Enter Your Phone")
+                            }
+                        } else {
+                            alert("Please Enter Your Gender")
+                        }
+                    } else {
+                        alert("Please Enter Your Age")
+                    }
+                } else {
+                    alert("Please Enter Your Full Name")
+                }
+            }
+            $("#submit").click(submit);
+
+        })
+    </script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="logo">
+                <h1><img src="images/9.png" class="logo" />
+            </div>
+            <div class="header_resize">
+                <div class="menu_nav">
+
+                    <ul>
+                        <li><a href="index.html"><span>Home Page</span></a></li>
+                        <li><a href="Preparing.html"><span>Preparing For Donation</span></a></li>
+                        <li><a href="request.html"><span>Request</span></a></li>
+                        <li><a href="Donate.html"><span>Donation</span></a></li>
+                        <li><a href="MyAccount.html"><span>My Account</span></a></li>
+                        <li><a href="Admin.html"><span>Admin</span></a></li>
+                        <li><a href="about.html"><span>About Us</span></a></li>
+                        <li><a href="contact.html"><span>Contact Us</span></a></li>
+                    </ul>
+                </div>
+                <div class="clr"></div>
+                <div class="slider">
+                    <div id="coin-slider">
+                        <a href="#">
+                            <img src="images/8.jpg" width="960" height="360" alt="" />
+                        </a>
+                    
+                    </div>
+                    <div class="clr"></div>
+                </div>
+                <div class="clr"></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content_resize">
+                <div class="mainbar"></div>
+                <div class="clr"></div>
+                <div class="MyAccountPage">
+                    <div id="showinfo">
+                        <center>
+                            <table id="infotable">
+                                <tr>
+                                    <td><label for="fname">Name : </label></td>
+                                    <td><span id="name"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="Age">Age : </label></td>
+                                    <td><span id="age"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="Gender">Gender : </label></td>
+                                    <td><span id="gender"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="Phone">Phone : </label></td>
+                                    <td><span id="phone"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="Mobile">Mobile : </label></td>
+                                    <td><span id="mobile"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="Email">Email : </label></td>
+                                    <td><span id="email"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="BType">Blood Type : </label></td>
+                                    <td><span id="btype"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="country">State : </label></td>
+                                    <td><span id="state"></span></td>
+                                </tr>
+                            </table>
+                        </center>
+                        <br />
+                        <center><input class="Button" id="update" type="submit" value="Update" /></center>
+                    </div>
+                    <div id="takeinfo">
+                        <center>
+                            <table id="infotable">
+                                <tr>
+                                    <td><label for="fname">First Name</label></td>
+                                    <td><input type="text" id="fnamein" name="firstname" /></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="lname">Last Name</label></td>
+                                    <td><input type="text" id="lnamein" name="lastname" /></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="Age">Age</label></td>
+                                    <td><input type="text" id="agein" name="Age" /></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="Gender">Gender</label></td>
+                                    <td>
+                                        <select id="genderin" name="gender">
+                                            <option value="Null" selected="selected" disabled=disabled disabled=disabled>Select Option</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label for="Phone">Phone</label></td>
+                                    <td><input type="text" id="phonein" name="Phone" /></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="Mobile">Mobile</label></td>
+                                    <td><input type="text" id="mobilein" name="Mobile" /></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="Email">Email</label></td>
+                                    <td><input type="text" id="emailin" name="email" /></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="BType">Blood Type</label></td>
+                                    <td>
+                                        <select id="bTypein" name="bType">
+                                            <option value="Null" selected="selected" disabled=disabled disabled=disabled>Select Option</option>
+                                            <option value="O+">O+</option>
+                                            <option value="O-">O-</option>
+                                            <option value="A+">A+</option>
+                                            <option value="B+">B+</option>
+                                            <option value="AB+">AB+</option>
+                                            <option value="AB-">AB-</option>
+                                        </select>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><label for="country">State</label></td>
+                                    <td>
+                                        <select id="countryin" name="country">
+                                            <option value="Null" selected="selected" disabled=disabled disabled=disabled>Select Option</option>
+                                            <option value="Cairo">Cairo</option>
+                                            <option value="Alex">Alex</option>
+                                            <option value="Ismaillia">Ismaillia</option>
+                                            <option value="Mansoura">Mansoura</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </center>
+                        <br />
+                        <center><input class="Button" id="submit" type="submit" value="Submit" /></center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

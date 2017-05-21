@@ -1,0 +1,95 @@
+{
+	"OctoberHospital" : [
+		{
+			"name" : "O+",
+			"value" : "12L"
+		},
+		{
+			"name" : "O-",
+			"value" : "12L"
+			
+		},
+		{
+			"name" : "A+",
+			"value" : "12L"
+		},
+		{
+			"name" : "A-",
+			"value" : "12L"
+		},
+		{
+			"name" : "B+",
+			"value" : "12L"
+		},
+		{
+			"name" : "AB+",
+			"value" : "12L"
+		},
+		{
+			"name" : "AB-",
+			"value" : "12L"
+		}
+	],
+	"DarElFouad" : [
+		{
+			"name" : "O+",
+			"value" : "5L"
+		},
+		{
+			"name" : "O-",
+			"value" : "12L"
+			
+		},
+		{
+			"name" : "A+",
+			"value" : "12L"
+		},
+		{
+			"name" : "A-",
+			"value" : "12L"
+		},
+		{
+			"name" : "B+",
+			"value" : "12L"
+		},
+		{
+			"name" : "AB+",
+			"value" : "12L"
+		},
+		{
+			"name" : "AB-",
+			"value" : "12L"
+		}
+	],
+	"AlAmiry" : [
+		{
+			"name" : "O+",
+			"value" : "3L"
+		},
+		{
+			"name" : "O-",
+			"value" : "12L"
+			
+		},
+		{
+			"name" : "A+",
+			"value" : "12L"
+		},
+		{
+			"name" : "A-",
+			"value" : "12L"
+		},
+		{
+			"name" : "B+",
+			"value" : "12L"
+		},
+		{
+			"name" : "AB+",
+			"value" : "12L"
+		},
+		{
+			"name" : "AB-",
+			"value" : "12L"
+		}
+	]
+}

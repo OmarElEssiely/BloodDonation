@@ -1,0 +1,424 @@
+﻿
+<head>
+    <title>Blood Donate</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/coin-slider.css" />
+    <script type="text/javascript" src="js/cufon-yui.js"></script>
+    <script type="text/javascript" src="js/cufon-georgia.js"></script>
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/coin-slider.min.js"></script>
+    <script src="jQuery-P.js"></script>
+    <script src="js/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.ajax("js/AdminRequset.json", {
+                type: "Get",
+                dataType: "json",
+                contentType: "application/json",
+                success: function(dataObj) {
+                    $("#1id").html(dataObj.persons[0].id);
+                    $("#1name").html(dataObj.persons[0].name);
+                    $("#1date").html(dataObj.persons[0].date);
+                    $("#1time").html(dataObj.persons[0].time);
+                    $("#1quntity").html(dataObj.persons[0].quntity);
+
+                    $("#2id").html(dataObj.persons[1].id);
+                    $("#2name").html(dataObj.persons[1].name);
+                    $("#2date").html(dataObj.persons[1].date);
+                    $("#2time").html(dataObj.persons[1].time);
+                    $("#2quntity").html(dataObj.persons[1].quntity);
+
+                    $("#3id").html(dataObj.persons[2].id);
+                    $("#3name").html(dataObj.persons[2].name);
+                    $("#3date").html(dataObj.persons[2].date);
+                    $("#3time").html(dataObj.persons[2].time);
+                    $("#3quntity").html(dataObj.persons[2].quntity);
+
+                    $("#4id").html(dataObj.persons[3].id);
+                    $("#4name").html(dataObj.persons[3].name);
+                    $("#4date").html(dataObj.persons[3].date);
+                    $("#4time").html(dataObj.persons[3].time);
+                    $("#4quntity").html(dataObj.persons[3].quntity);
+
+                    $("#5id").html(dataObj.persons[4].id);
+                    $("#5name").html(dataObj.persons[4].name);
+                    $("#5date").html(dataObj.persons[4].date);
+                    $("#5time").html(dataObj.persons[4].time);
+                    $("#5quntity").html(dataObj.persons[4].quntity);
+                },
+            })
+            $.ajax("js/AdminDailyRequset.json", {
+                type: "Get",
+                dataType: "json",
+                contentType: "application/json",
+                success: function(dataObj) {
+                    $("#1did").html(dataObj.persons[0].id);
+                    $("#1dname").html(dataObj.persons[0].name);
+                    $("#1ddate").html(dataObj.persons[0].date);
+                    $("#1dtime").html(dataObj.persons[0].time);
+                    $("#1dquntity").html(dataObj.persons[0].quntity);
+
+                    $("#2did").html(dataObj.persons[1].id);
+                    $("#2dname").html(dataObj.persons[1].name);
+                    $("#2ddate").html(dataObj.persons[1].date);
+                    $("#2dtime").html(dataObj.persons[1].time);
+                    $("#2dquntity").html(dataObj.persons[1].quntity);
+
+                    $("#3did").html(dataObj.persons[2].id);
+                    $("#3dname").html(dataObj.persons[2].name);
+                    $("#3ddate").html(dataObj.persons[2].date);
+                    $("#3dtime").html(dataObj.persons[2].time);
+                    $("#3dquntity").html(dataObj.persons[2].quntity);
+
+                    $("#4did").html(dataObj.persons[3].id);
+                    $("#4dname").html(dataObj.persons[3].name);
+                    $("#4ddate").html(dataObj.persons[3].date);
+                    $("#4dtime").html(dataObj.persons[3].time);
+                    $("#4dquntity").html(dataObj.persons[3].quntity);
+
+                    $("#5did").html(dataObj.persons[4].id);
+                    $("#5dname").html(dataObj.persons[4].name);
+                    $("#5ddate").html(dataObj.persons[4].date);
+                    $("#5dtime").html(dataObj.persons[4].time);
+                    $("#5dquntity").html(dataObj.persons[4].quntity);
+                },
+            })
+            var person1 = function() {
+                $("#person1").hide();
+            }
+            $("#accept1").click(person1);
+            $("#ignore1").click(person1);
+
+            var person2 = function() {
+                $("#person2").hide();
+            }
+            $("#accept2").click(person2);
+            $("#ignore2").click(person2);
+
+            var person3 = function() {
+                $("#person3").hide();
+            }
+            $("#accept3").click(person3);
+            $("#ignore3").click(person3);
+
+            var person4 = function() {
+                $("#person4").hide();
+            }
+            $("#accept4").click(person4);
+            $("#ignore4").click(person4);
+
+            var person5 = function() {
+                $("#person5").hide();
+            }
+            $("#accept5").click(person5);
+            $("#ignore5").click(person5);
+
+            $.ajax("js/HospitalStuts.json", {
+                type: "Get",
+                dataType: "json",
+                contentType: "application/json",
+                success: function(dataObj) {
+                    $("#hos1").click(function() {
+                        $("#hos1bt1").html(dataObj.OctoberHospital[0].value);
+                        $("#hos1bt2").html(dataObj.OctoberHospital[1].value);
+                        $("#hos1bt3").html(dataObj.OctoberHospital[2].value);
+                        $("#hos1bt4").html(dataObj.OctoberHospital[3].value);
+                        $("#hos1bt5").html(dataObj.OctoberHospital[4].value);
+                        $("#hos1bt6").html(dataObj.OctoberHospital[5].value);
+                        $("#hos1bt7").html(dataObj.OctoberHospital[6].value);
+                    })
+
+                    $("#hos2").click(function() {
+                        $("#hos1bt1").html(dataObj.DarElFouad[0].value);
+                        $("#hos1bt2").html(dataObj.DarElFouad[1].value);
+                        $("#hos1bt3").html(dataObj.DarElFouad[2].value);
+                        $("#hos1bt4").html(dataObj.DarElFouad[3].value);
+                        $("#hos1bt5").html(dataObj.DarElFouad[4].value);
+                        $("#hos1bt6").html(dataObj.DarElFouad[5].value);
+                        $("#hos1bt7").html(dataObj.DarElFouad[6].value);
+                    })
+
+                    $("#hos3").click(function() {
+                        $("#hos1bt1").html(dataObj.AlAmiry[0].value);
+                        $("#hos1bt2").html(dataObj.AlAmiry[1].value);
+                        $("#hos1bt3").html(dataObj.AlAmiry[2].value);
+                        $("#hos1bt4").html(dataObj.AlAmiry[3].value);
+                        $("#hos1bt5").html(dataObj.AlAmiry[4].value);
+                        $("#hos1bt6").html(dataObj.AlAmiry[5].value);
+                        $("#hos1bt7").html(dataObj.AlAmiry[6].value);
+                    })
+                }
+            })
+            var value;
+            var getid = function() {
+                value = parseInt(prompt("Enter The Patint ID", ""));
+                deleteid();
+            }
+            $("#sendbutton").click(getid)
+            var deleteid = function() {
+                if (value == 1) {
+                    $("#persond1").hide();
+                }
+                if (value == 2) {
+                    $("#persond2").hide();
+                }
+                if (value == 3) {
+                    $("#persond3").hide();
+                }
+                if (value == 4) {
+                    $("#persond4").hide();
+                }
+                if (value == 5) {
+                    $("#persond5").hide();
+                }
+            }
+        })
+    </script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="logo">
+                <h1><img src="images/9.png" class="logo" />
+            </div>
+            <div class="header_resize">
+                <div class="menu_nav">
+
+                    <ul>
+                        <li><a href="index.html"><span>Home Page</span></a></li>
+                        <li><a href="Preparing.html"><span>Preparing For Donation</span></a></li>
+                        <li><a href="request.html"><span>Request</span></a></li>
+                        <li><a href="Donate.html"><span>Donation</span></a></li>
+                        <li><a href="MyAccount.html"><span>My Account</span></a></li>
+                        <li class="active"><a href="Admin.html"><span>Admin</span></a></li>
+                        <li><a href="about.html"><span>About Us</span></a></li>
+                        <li><a href="contact.html"><span>Contact Us</span></a></li>
+                    </ul>
+                </div>
+                <div class="clr"></div>
+                <div class="slider">
+                    <div id="coin-slider">
+                            <a href="#"><img src="images/slide3.jpg" width="960" height="360" alt="" /></a>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+                <div class="clr"></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content_resize">
+                <div class="mainbar"></div>
+                <div class="clr"></div>
+                <div class="MyAccountPage">
+                    <div id="request">
+                        <h1> Request </h1>
+                        <div class="">
+                            <center>
+                                <table cellpadding="0" cellspacing="0" border="0">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                            <th>Date</th>
+                                            <th>Time</th>
+                                            <th>Quntity</th>
+                                            <th>Result</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </center>
+                        </div>
+                        <div class="tbl-content" id="tbl-content1">
+                            <table id="tablerquest" cellpadding="0" cellspacing="0" border="0">
+                                <tbody>
+                                    <tr id="person1">
+                                        <td><span id="1id"></span></td>
+                                        <td><span id="1name"></span></td>
+                                        <td><span id="1date"></span></td>
+                                        <td><span id="1time"></span></td>
+                                        <td><span id="1quntity"></span></td>
+                                        <td>
+                                            <span id="1result">
+                                                <input id="accept1" class="Buttonadmin" type="button" value="Accept" />
+                                                <input id="ignore1" class="Buttonadmin" type="button" value="Ignore" />
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr id="person2">
+                                        <td><span id="2id"></span></td>
+                                        <td><span id="2name"></span></td>
+                                        <td><span id="2date"></span></td>
+                                        <td><span id="2time"></span></td>
+                                        <td><span id="2quntity"></span></td>
+                                        <td>
+                                            <span id="2result">
+                                                <input id="accept2" class="Buttonadmin" type="button" value="Accept" />
+                                                <input id="ignore2" class="Buttonadmin" type="button" value="Ignore" />
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr id="person3">
+                                        <td><span id="3id"></span></td>
+                                        <td><span id="3name"></span></td>
+                                        <td><span id="3date"></span></td>
+                                        <td><span id="3time"></span></td>
+                                        <td><span id="3quntity"></span></td>
+                                        <td>
+                                            <span id="3result">
+                                                <input id="accept3" class="Buttonadmin" type="button" value="Accept" />
+                                                <input id="ignore3" class="Buttonadmin" type="button" value="Ignore" />
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr id="person4">
+                                        <td><span id="4id"></span></td>
+                                        <td><span id="4name"></span></td>
+                                        <td><span id="4date"></span></td>
+                                        <td><span id="4time"></span></td>
+                                        <td><span id="4quntity"></span></td>
+                                        <td>
+                                            <span id="4result">
+                                                <input id="accept4" class="Buttonadmin" type="button" value="Accept" />
+                                                <input id="ignore4" class="Buttonadmin" type="button" value="Ignore" />
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr id="person5">
+                                        <td><span id="5id"></span></td>
+                                        <td><span id="5name"></span></td>
+                                        <td><span id="5date"></span></td>
+                                        <td><span id="5time"></span></td>
+                                        <td><span id="5quntity"></span></td>
+                                        <td>
+                                            <span id="5result">
+                                                <input id="accept5" class="Buttonadmin" type="button" value="Accept" />
+                                                <input id="ignore5" class="Buttonadmin" type="button" value="Ignore" />
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="daliyrequset">
+                        <h1> Daliy Request </h1>
+                        <div class="">
+                            <center>
+                                <table cellpadding="0" cellspacing="0" border="0">
+                                    <thead>
+                                        <tr>
+                                            <th style="color:red;">ID</th>
+                                            <th style="color:red;">Name</th>
+                                            <th style="color:red;">Date</th>
+                                            <th style="color:red;">Time</th>
+                                            <th style="color:red;">Quntity</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </center>
+                        </div>
+                        <div class="tbl-content" id="tbl-content1">
+                            <table id="tabledailyrquest" cellpadding="0" cellspacing="0" border="0">
+                                <tbody>
+                                    <tr id="persond1">
+                                        <td><span id="1did" style="color:red;"></span></td>
+                                        <td><span id="1dname" style="color:red;"></span></td>
+                                        <td><span id="1ddate" style="color:red;"></span></td>
+                                        <td><span id="1dtime" style="color:red;"></span></td>
+                                        <td><span id="1dquntity" style="color:red;"></span></td>
+                                    </tr>
+                                    <tr id="persond2">
+                                        <td><span id="2did" style="color:red;"></span></td>
+                                        <td><span id="2dname" style="color:red;"></span></td>
+                                        <td><span id="2ddate" style="color:red;"></span></td>
+                                        <td><span id="2dtime" style="color:red;"></span></td>
+                                        <td><span id="2dquntity" style="color:red;"></span></td>
+
+                                    </tr>
+                                    <tr id="persond3">
+                                        <td><span id="3did" style="color:red;"></span></td>
+                                        <td><span id="3dname" style="color:red;"></span></td>
+                                        <td><span id="3ddate" style="color:red;"></span></td>
+                                        <td><span id="3dtime" style="color:red;"></span></td>
+                                        <td><span id="3dquntity" style="color:red;"></span></td>
+
+                                    </tr>
+                                    <tr id="persond4">
+                                        <td><span id="4did" style="color:red;"></span></td>
+                                        <td><span id="4dname" style="color:red;"></span></td>
+                                        <td><span id="4ddate" style="color:red;"></span></td>
+                                        <td><span id="4dtime" style="color:red;"></span></td>
+                                        <td><span id="4dquntity" style="color:red;"></span></td>
+
+                                    </tr>
+                                    <tr id="persond5">
+                                        <td><span id="5did" style="color:red;"></span></td>
+                                        <td><span id="5dname" style="color:red;"></span></td>
+                                        <td><span id="5ddate" style="color:red;"></span></td>
+                                        <td><span id="5dtime" style="color:red;"></span></td>
+                                        <td><span id="5dquntity" style="color:red;"></span></td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="hospitalstatus">
+
+                        <h1> Hospital Status </h1>
+                        <h2>Hospitals :</h2>
+                        <select id="Band">
+                            <option id="hos1">6 October Hospital</option>
+                            <option id="hos2">Dar ElFouad</option>
+                            <option id="hos3">Al Amiry</option>
+                        </select>
+                        <div class="">
+                            <center>
+                                <table cellpadding="0" cellspacing="0" border="0">
+                                    <thead>
+                                        <tr>
+                                            <th><span id="bt1">O+</span></th>
+                                            <th><span id="bt2">O-</span></th>
+                                            <th><span id="bt3">A+</span></th>
+                                            <th><span id="bt4">A-</span></th>
+                                            <th><span id="bt5">B+</span></th>
+                                            <th><span id="bt6">AB+</span></th>
+                                            <th><span id="bt7">AB-</span></th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </center>
+                        </div>
+                        <div class="HosSta" id="HosSta">
+                            <center>
+                                <table id="tabledailyrquest" cellpadding="0" cellspacing="0" border="0">
+                                    <tbody>
+                                        <tr id="Hospital1">
+                                            <td><span id="hos1bt1"></span></td>
+                                            <td><span id="hos1bt2"></span></td>
+                                            <td><span id="hos1bt3"></span></td>
+                                            <td><span id="hos1bt4"></span></td>
+                                            <td><span id="hos1bt5"></span></td>
+                                            <td><span id="hos1bt6"></span></td>
+                                            <td><span id="hos1bt7"></span></td>
+                                            <td>
+                                                <span id="send">
+                                                    <input id="sendbutton" class="sendbutton" type="button" value="Send" />
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

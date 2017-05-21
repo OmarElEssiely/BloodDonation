@@ -1,0 +1,353 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Blood Donate</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/coin-slider.css" />
+    <script type="text/javascript" src="js/cufon-yui.js"></script>
+    <script type="text/javascript" src="js/cufon-georgia.js"></script>
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/coin-slider.min.js"></script>
+    <script src="jQuery-P.js"></script>
+    <script src="js/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.ajax("js/hospital.json", {
+                type: "Get",
+                dataType: "json",
+                contentType: "application/json",
+                success: function(dataObj) {
+                    $("#hospital1name").html(dataObj.hospital[0].name);
+                    $("#hospital1address").html(dataObj.hospital[0].address);
+                    $("#hospital1phone").html(dataObj.hospital[0].phone);
+
+                    $("#hospital2name").html(dataObj.hospital[1].name);
+                    $("#hospital2address").html(dataObj.hospital[1].address);
+                    $("#hospital2phone").html(dataObj.hospital[1].phone);
+
+                    $("#hospital3name").html(dataObj.hospital[2].name);
+                    $("#hospital3address").html(dataObj.hospital[2].address);
+                    $("#hospital3phone").html(dataObj.hospital[2].phone);
+                },
+            })
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $.ajax("js/person.json", {
+                type: "Get",
+                dataType: "json",
+                contentType: "application/json",
+                success: function(dataObj) {
+                    $("#1name").html(dataObj.persons[0].name);
+                    $("#1email").html(dataObj.persons[0].email);
+                    $("#1phone").html(dataObj.persons[0].phone);
+                    $("#1mobile").html(dataObj.persons[0].mobile);
+
+                    $("#2name").html(dataObj.persons[1].name);
+                    $("#2email").html(dataObj.persons[1].email);
+                    $("#2phone").html(dataObj.persons[1].phone);
+                    $("#2mobile").html(dataObj.persons[1].mobile);
+
+                    $("#3name").html(dataObj.persons[2].name);
+                    $("#3email").html(dataObj.persons[2].email);
+                    $("#3phone").html(dataObj.persons[2].phone);
+                    $("#3mobile").html(dataObj.persons[2].mobile);
+
+                    $("#4name").html(dataObj.persons[3].name);
+                    $("#4email").html(dataObj.persons[3].email);
+                    $("#4phone").html(dataObj.persons[3].phone);
+                    $("#4mobile").html(dataObj.persons[3].mobile);
+
+                    $("#5name").html(dataObj.persons[4].name);
+                    $("#5email").html(dataObj.persons[4].email);
+                    $("#5phone").html(dataObj.persons[4].phone);
+                    $("#5mobile").html(dataObj.persons[4].mobile);
+                },
+            })
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#img1").hide();
+            $("#img2").hide();
+            $("#img3").hide();
+            $("#img4").hide();
+            $("#img5").hide();
+
+            var buttonhide1 = function() {
+                $("#person2").hide()
+                $("#person3").hide()
+                $("#person4").hide()
+                $("#person5").hide()
+                $("#Button1").hide()
+                $("#img1").show();
+            }
+            $("#Button1").click(buttonhide1);
+
+            var buttonhide2 = function() {
+                $("#person1").hide()
+                $("#person3").hide()
+                $("#person4").hide()
+                $("#person5").hide()
+                $("#Button2").hide()
+                $("#img2").show();
+            }
+            $("#Button2").click(buttonhide2);
+
+            var buttonhide3 = function() {
+                $("#person1").hide()
+                $("#person2").hide()
+                $("#person4").hide()
+                $("#person5").hide()
+                $("#Button3").hide()
+                $("#img3").show();
+            }
+            $("#Button3").click(buttonhide3);
+
+            var buttonhide4 = function() {
+                $("#person1").hide()
+                $("#person2").hide()
+                $("#person3").hide()
+                $("#person5").hide()
+                $("#Button4").hide()
+                $("#img4").show();
+            }
+            $("#Button4").click(buttonhide4);
+
+            var buttonhide5 = function() {
+                $("#person1").hide()
+                $("#person2").hide()
+                $("#person3").hide()
+                $("#person4").hide()
+                $("#Button5").hide()
+                $("#img5").show();
+            }
+            $("#Button5").click(buttonhide5);
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#Info").click(function() {
+                window.location = "Info.html"
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="logo">
+                <h1><img src="images/9.png" class="logo" />
+            </div>
+            <div class="header_resize">
+                <div class="menu_nav">
+
+                    <ul>
+                        <li><a href="index.html"><span>Home Page</span></a></li>
+                        <li><a href="Preparing.html"><span>Preparing For Donation</span></a></li>
+                        <li><a href="request.html"><span>Request</span></a></li>
+                        <li><a href="Donate.html"><span>Donation</span></a></li>
+                        <li class="active"><a href="MyAccount.html"><span>My Account</span></a></li>
+                        <li><a href="Admin.html"><span>Admin</span></a></li>
+                        <li><a href="about.html"><span>About Us</span></a></li>
+                        <li><a href="contact.html"><span>Contact Us</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="clr"></div>
+                <div class="slider">
+                    <div id="coin-slider">
+                           <a href="#"><img src="images/8.jpg" width="960" height="360" alt="" /></a>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+                <div class="clr"></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content_resize">
+                <div class="mainbar"></div>
+                <div class="clr"></div>
+                <div class="MyAccountPage">
+                    <div class="info">
+                        <center>
+                            <span id="welcome">
+                                Welcome : Ahmed
+                            </span>
+                            <div>
+                                <!--<img src="Info.png" id="info" />-->
+                                <input class="Button" id="Info" type="button" value="My Info" />
+                            </div>
+                        </center>
+                    </div>
+                    <section>
+                        <!--for demo wrap-->
+                        <h1>Persons Response</h1>
+                        <div class="tbl-header">
+                            <center>
+                                <table cellpadding="0" cellspacing="0" border="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Phone</th>
+                                            <th>Mobile</th>
+                                            <th>Choose</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </center>
+                        </div>
+                        <div class="tbl-content" id="tbl-content1">
+                            <table cellpadding="0" cellspacing="0" border="0">
+                                <tbody>
+                                    <tr id="person1">
+                                        <td>
+                                            <span id="1name"></span>
+                                        </td>
+                                        <td>
+                                            <span id="1email"></span>
+                                        </td>
+                                        <td>
+                                            <span id="1phone"></span>
+                                        </td>
+                                        <td>
+                                            <span id="1mobile"></span>
+                                        </td>
+                                        <td>
+                                            <input class="Button" id="Button1" type="button" value="Select" />
+                                            <span><img src="images/1.png" class="sa7" id="img1" /></span>
+                                        </td>
+                                    </tr>
+                                    <tr id="person2">
+                                        <td>
+                                            <span id="2name"></span>
+                                        </td>
+                                        <td>
+                                            <span id="2email"></span>
+                                        </td>
+                                        <td>
+                                            <span id="2phone"></span>
+                                        </td>
+                                        <td>
+                                            <span id="2mobile"></span>
+                                        </td>
+                                        <td>
+                                            <input class="Button" id="Button2" type="button" value="Select" />
+                                            <span><img src="images/1.png" class="sa7" id="img2" /></span>
+                                        </td>
+                                    </tr>
+                                    <tr id="person3">
+                                        <td>
+                                            <span id="3name"></span>
+                                        </td>
+                                        <td>
+                                            <span id="3email"></span>
+                                        </td>
+                                        <td>
+                                            <span id="3phone"></span>
+                                        </td>
+                                        <td>
+                                            <span id="3mobile"></span>
+                                        </td>
+                                        <td>
+                                            <input class="Button" id="Button3" type="button" value="Select" />
+                                            <span><img src="images/1.png" class="sa7" id="img3" /></span>
+                                        </td>
+                                    </tr>
+                                    <tr id="person4">
+                                        <td>
+                                            <span id="4name"></span>
+                                        </td>
+                                        <td>
+                                            <span id="4email"></span>
+                                        </td>
+                                        <td>
+                                            <span id="4phone"></span>
+                                        </td>
+                                        <td>
+                                            <span id="4mobile"></span>
+                                        </td>
+                                        <td>
+                                            <input class="Button" id="Button4" type="button" value="Select" />
+                                            <span><img src="images/1.png" class="sa7" id="img4" /></span>
+                                        </td>
+                                    </tr>
+                                    <tr id="person5">
+                                        <td>
+                                            <span id="5name"></span>
+                                        </td>
+                                        <td>
+                                            <span id="5email"></span>
+                                        </td>
+                                        <td>
+                                            <span id="5phone"></span>
+                                        </td>
+                                        <td>
+                                            <span id="5mobile"></span>
+                                        </td>
+                                        <td>
+                                            <input class="Button" id="Button5" type="button" value="Select" />
+                                            <span><img src="images/1.png" class="sa7" id="img5" /></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </section>
+
+                    <section>
+                        <!--for demo wrap-->
+                        <h1>Hospital Response</h1>
+                        <div class="tbl-header">
+                            <table cellpadding="0" cellspacing="0" border="0">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Address</th>
+                                        <th>Phone</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="tbl-content" id="tbl-content2">
+                            <table cellpadding="0" cellspacing="0" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td><span id="hospital1name"></span></td>
+                                        <td><span id="hospital1address"></span></td>
+                                        <td><span id="hospital1phone"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span id="hospital2name"></span></td>
+                                        <td><span id="hospital2address"></span></td>
+                                        <td><span id="hospital2phone"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span id="hospital3name"></span></td>
+                                        <td><span id="hospital3address"></span></td>
+                                        <td><span id="hospital3phone"></span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                    <span>
+                        <center>
+                            <span id="N"> Donates Number : </span><input id="Text" type="text" value="6" disabled="disabled" />
+                    <span id="N"> Requests Number : </span><input id="Text" type="text" value="2" disabled="disabled" />
+                    </center>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

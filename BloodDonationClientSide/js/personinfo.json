@@ -1,0 +1,14 @@
+{
+    "persons": [
+        {
+            "name": "Ahmed Osman",
+            "age": "26",
+            "gender": "Male",
+            "phone": "021234567",
+            "mobile": "01234567890",
+            "email": "Ahmed.Osman@gmail.com",
+            "btype": "A+",
+            "state": "Ismaillia"
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+﻿{
+  "hospitals": [
+    {
+      "HospitalName": "Al Waha Hospital",
+      "city": "Giza",
+      "number": "0111-2531-183",
+      "website": "NA",
+      "latitude": 29.998611,
+      "longitude": 31.337194
+    },
+    {
+      "HospitalName": "Dar El Fouad",
+      "city": "6 October",
+      "number": "0100-1150-359",
+      "website": "NA",
+      "latitude": 29.998558,
+      "longitude": 30.967527
+    },
+    {
+      "HospitalName": "City Clinic",
+      "city": "El Sheikh Zayed, 6th of october, Giza",
+      "number": "0100-3779-314",
+      "website": "NA",
+      "latitude": 30.059201,
+      "longitude": 30.942048
+    },
+    {
+      "HospitalName": "Children’s Cancer Hospital Foundation",
+      "city": "El-Sayeda Zainab, Cairo ",
+      "number": "02 25351500",
+      "website": "NA",
+      "latitude": 30.022980,
+      "longitude": 31.237848
+    },
+    {
+      "HospitalName": "As-Salam International Hospital ",
+      "city": " Maadi , Cairo",
+      "number": "19883",
+      "website": "NA",
+      "latitude": 29.985070,
+      "longitude": 31.230042
+    },
+    {
+      "HospitalName": "Egyptian IVF Center",
+      "city": " Maadi , Cairo  ",
+      "number": "02 25254928",
+      "website": "NA",
+      "latitude": 29.967551,
+      "longitude": 31.248827
+
+    }
+  ]
+}

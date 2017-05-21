@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sign Up Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <!--HALIM_SCRIPTS-->
+    <script src="js/HALIM_jquery-3.1.1.js"></script>
+    <script src="js/HALIM_jquery-1.12.4.js"></script>
+    <script src="js/HALIM_jquery-ui.js"></script>
+    <script src="js/HALIM_jquery.mask.js"></script>
+    <script>
+    function setCookie() {
+        var CustomObject = {};
+        CustomObject.FirstName = document.getElementById("firstname").value;
+        CustomObject.LastName = document.getElementById("lastname").value;
+        CustomObject.Address = document.getElementById("address").value;
+        CustomObject.Phone = document.getElementById("phone").value;
+        CustomObject.EmaliAddress = document.getElementById("email").value;
+        CustomObject.Password = document.getElementById("password").value;
+        CustomObject.BirthDate = document.getElementById("birtdate").value;
+        CustomObject.LastDonate = document.getElementById("lastdonate").value;
+
+        //get the selected gender from select tag
+        var selectgender = document.getElementById("gender");
+        var indexgender = selectgender.selectedIndex;
+        CustomObject.Gender = selectgender.options[indexgender].text;
+        //-------------------gender-----------------
+
+        //get the selected blood type from select tag
+        var selectblood = document.getElementById("bloodtype");
+        var indexblood = selectblood.selectedIndex;
+        CustomObject.Gender = selectblood.options[indexblood].text;
+        //-------------------blood type -----------
+
+        //get the selected blood type from select tag
+        var selectdonatestatus = document.getElementById("donatestatus");
+        var indexdonatestatus = selectdonatestatus.selectedIndex;
+        CustomObject.Gender = selectdonatestatus.options[indexdonatestatus].text;
+        //------------select donate status---------
+
+        var jsonString = JSON.stringify(CustomObject);
+        document.cookie = "obj0=" + jsonString + "; expires=Thu, 18 Dec 2016 12:00:00 UTC; path=/";
+    }
+    $(document).ready(function () {
+        $(function () {
+            //date piker to force user to enter the right date
+            $(".datepicker").datepicker();
+        });
+        //mask on telephione number to detect if user entered number or not
+        $('#phone').mask('(000) 000-000-00');
+
+    });
+
+
+    </script>
+    <!--HALIM_SCRIPTS-->
+
+
+    <!--HALIM_CSS-->    
+    <link href="css/HALIM_jquery-ui.css" rel="stylesheet" />
+    <link href="css/HALIM_themesBaseJquery-ui.css" rel="stylesheet" />
+    <link href="css/HALIM_SignUpPage.css" rel="stylesheet" />
+    <!--HALIM_CSS-->    
+</head>
+<body>
+
+    <form action="MyAccount.html">
+
+        <div class="imgcontainer">
+            <img src="../Images/signUpImage.png" alt=" SignUpImage" class="avatar">
+        </div>
+        <div class="container">
+
+            <label><b>First Name:</b></label>
+            <input type="text" id="firstname" placeholder="Enter your first name" name="firstname" required autocomplete="on">
+            <label><b>Last Name:</b></label>
+            <input type="text" id="lastname" placeholder="Enter your last name" name="LastName" required autocomplete="on">
+            <label><b>Address:</b></label>
+            <input type="text" id="address" placeholder="Enter your Address" name="Address" required autocomplete="on">
+            <label><b>Phone:</b></label>
+            <input type="text" id="phone" placeholder="Enter your Phone"  required >
+            <label><b>Email Address:</b></label>
+            <input type="email" id="email" placeholder="Enter your mail" name="email" required >
+            <label><b>Password:</b></label>
+            <input type="password" id="password" placeholder="Enter Password" name="psw" required>
+            <label><b>Gender:</b></label>
+            <select id="gender" class=" styled-select">
+                <option value="male">Male</option>
+                <option value="Female"> Female</option>
+            </select>
+            <label><b>Birthday:</b></label>
+            <input type="text" id="birtdate" class="datepicker" placeholder="Choose Your Birthdate" required>
+            <label><b>Blood Type:</b></label>
+            <select id="bloodtype" class=" styled-select">
+                <option disabled>Select Your Blood Type</option>
+                <option value="O+"> O+</option>
+                <option value="O-">O-</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+            </select>
+            <label><b>Last Donate:</b></label>
+            <input type="text" id="lastdonate" onclick="date();" class="datepicker" placeholder="Last Donate Date" required>
+            <label><b>Donate status:</b></label>
+            <select id="donatestatus" class=" styled-select">
+                <option value="YES">YES</option>
+                <option value="NO">NO</option>
+            </select>
+            <button type="submit" id="submit" onclick="setCookie();">Sign Up</button>
+            <input type="checkbox" checked="checked"> Remember me
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="location.href = 'index.html';" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>
+
+</body>
+</html>
